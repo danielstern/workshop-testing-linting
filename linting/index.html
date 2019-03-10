@@ -1,0 +1,28 @@
+<body>
+<h1>
+    Enter Your Login Info
+</h1>
+<form onsubmit="handleFormSubmit()">
+    <input type="text" id="name" placeholder="username">
+    <input type="text" id="password">
+    <button type="submit">OK</button>
+</form>
+<div id="ErrorDisplay">
+
+</div>
+</body>
+<script src="validateUser.js"></script>
+<script>
+    function handleFormSubmit(){
+        event.preventDefault();
+        console.log("Whoa!");
+        let username = document.getElementById("name").value;
+        let password = document.getElementById("password").value;
+        let errors = validateUser({username,password});
+        console.log(errors);
+        if (errors.length > 0) {
+            let display = document.getElementById("ErrorDisplay");
+            display.innerHTML = errors.map(error=>`<div>${error.description}</div>`).join(``);
+        }
+    }
+</script>

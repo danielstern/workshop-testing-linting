@@ -1,0 +1,10 @@
+{
+//  "extends":"eslint:recommended",
+  "extends":"eslint:all",
+  "parser": "babel-eslint",
+  "rules":{
+    "linebreak-style":0,
+    "padded-blocks":0,
+    "quote-props":0
+  }
+}
