@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "eslint ./linting/validateUser.js",
+    "test": "eslint ./linting/validateUser-finish.js",
     "start": "http-server"
   },
   "keywords": [],

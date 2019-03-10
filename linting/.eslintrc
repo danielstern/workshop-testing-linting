@@ -5,6 +5,7 @@
   "rules":{
     "linebreak-style":0,
     "padded-blocks":0,
-    "quote-props":0
+    "quote-props":0,
+    "func-style":0
   }
 }

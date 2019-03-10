@@ -11,18 +11,19 @@
 
 </div>
 </body>
-<script src="validateUser.js"></script>
+<script src="validateUser-finish.js"></script>
 <script>
     function handleFormSubmit(){
         event.preventDefault();
-        console.log("Whoa!");
         let username = document.getElementById("name").value;
         let password = document.getElementById("password").value;
         let errors = validateUser({username,password});
-        console.log(errors);
-        if (errors.length > 0) {
-            let display = document.getElementById("ErrorDisplay");
-            display.innerHTML = errors.map(error=>`<div>${error.description}</div>`).join(``);
+
+        let display = document.getElementById("ErrorDisplay");
+        display.innerHTML = errors.map(error=>`<div>${error.description}</div>`).join(``);
+
+        if (errors.length === 0) {
+            display.innerHTML = "No errors!";
         }
     }
 </script>
