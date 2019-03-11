@@ -6,6 +6,7 @@
   "scripts": {
     "lint": "eslint ./linting/validateUser-finish.js",
     "test": "jest --watch",
+    "test-todo":"jest todo --watch",
     "start": "http-server"
   },
   "keywords": [],
