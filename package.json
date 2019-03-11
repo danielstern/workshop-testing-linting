@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "eslint ./linting/validateUser-finish.js",
+    "lint": "eslint ./linting/validateUser-finish.js",
+    "test": "jest --watch",
     "start": "http-server"
   },
   "keywords": [],
@@ -13,6 +14,7 @@
   "devDependencies": {
     "babel-eslint": "^10.0.1",
     "eslint": "^5.15.1",
-    "http-server": "^0.11.1"
+    "http-server": "^0.11.1",
+    "jest": "^24.3.1"
   }
 }
