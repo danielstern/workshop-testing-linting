@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint ./linting/validateUser-finish.js",
+    "lint-todo": "eslint ./todo/todo-finish.js",
     "test": "jest --watch",
     "test-todo":"jest todo --watch",
     "start": "http-server"
