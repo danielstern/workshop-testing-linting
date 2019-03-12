@@ -17,7 +17,6 @@ class TodoApplication {
         let item = this.todoItems.find(item=>item.id === id);
         item.priority -= increment;
         item.priority = Math.max(item.priority,0);
-        this.render();
     }
     sortItems(){
         console.log("Sort!");
