@@ -2,10 +2,10 @@ const passwordMinLength = 6,
     usernameMinLength = 4;
 
 const ValidationError = {
-    USERNAME_MIN_LENGTH: "USERNAME_MIN_LENGTH",
-    USERNAME_INVALID_CHARACTER: "USERNAME_INVALID_CHARACTER",
     PASSWORD_MIN_LENGTH: "PASSWORD_MIN_LENGTH",
-    PASSWORD_NO_NUMBER: "PASSWORD_NO_NUMBER"
+    PASSWORD_NO_NUMBER: "PASSWORD_NO_NUMBER",
+    USERNAME_INVALID_CHARACTER: "USERNAME_INVALID_CHARACTER",
+    USERNAME_MIN_LENGTH: "USERNAME_MIN_LENGTH"
 };
 
 function validateUsername (username, errors) {
@@ -17,7 +17,7 @@ function validateUsername (username, errors) {
         });
     }
 
-    if (username.match(/^.*?(?=[\^#%&$\*:<>\?/\{\|\}]).*$/u)) {
+    if (username.match(/^.*?(?=[\^#%&$*:<>?/{|}]).*$/u)) {
         errors.push({
             description: "Username contains an invalid character.",
             type: ValidationError.USERNAME_INVALID_CHARACTER
@@ -29,7 +29,7 @@ function validatePassword (password, errors) {
     if (password.length < passwordMinLength) {
         errors.push({
             description: "Password must be at least 6 characters.",
-            type:  ValidationError.PASSWORD_MIN_LENGTH
+            type: ValidationError.PASSWORD_MIN_LENGTH
         });
     }
 
@@ -53,8 +53,8 @@ function validateUser (userInfo) {
 
 if (typeof module !== "undefined") {
     module.exports = {
+        ValidationError,
         validatePassword,
-        validateUsername,
-        ValidationError
-    }
+        validateUsername
+    };
 }

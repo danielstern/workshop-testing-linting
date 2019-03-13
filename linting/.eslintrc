@@ -6,6 +6,12 @@
     "linebreak-style":0,
     "padded-blocks":0,
     "quote-props":0,
-    "func-style":0
+    "func-style":0,
+    "one-var":0
+  },
+  "env": {
+    "browser": true,
+    "amd": true,
+    "node": true
   }
 }
